@@ -55,7 +55,7 @@ void CallPython::predictDecision()
 {
 
     PyGILState_STATE s = PyGILState_Ensure();
-    PyRun_SimpleString("import sys; sys.path.append('/home/mouna1/deciderTest/predictionScripts')");
+    PyRun_SimpleString("import sys; sys.path.append('pathToScript/predictionScripts')");
 
     PyObject *pName = PyUnicode_DecodeFSDefault((char*)"PredictLteTraffic");
     PyObject* pModule = PyImport_Import(pName);
@@ -65,7 +65,7 @@ void CallPython::predictDecision()
      /// call read data
     PyObject* pFunction;
         pFunction=PyObject_GetAttrString(pModule,(char*)"readData");
-        PyObject* pArgs=PyTuple_Pack(1,PyUnicode_FromString((char*)"/home/mouna1/deciderTest/predictionScripts/Nodesprofil.csv"));
+        PyObject* pArgs=PyTuple_Pack(1,PyUnicode_FromString((char*)"pathTo/Nodesprofil.csv"));
 
         std::cout << "Result of python script" << "\n";
         if((pFunction!=NULL)&&(pArgs!=NULL))

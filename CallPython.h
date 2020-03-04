@@ -16,13 +16,8 @@
 #ifndef __ARTERY_ARTERY_IDE_CALLPYTHON_H_
 #define __ARTERY_ARTERY_IDE_CALLPYTHON_H_
 
-#include <omnetpp.h>
 #include <Python.h>
 #include <iostream>
-#include"artery/lte/NetworkSelection/Decider.h"
-#include "artery/lte/NetworkSelection/AutonomousBased/AutonomousDecider.h"
-
-using namespace omnetpp;
 
 namespace artery {
 
